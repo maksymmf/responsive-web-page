@@ -1,0 +1,96 @@
+/* сброс стилей браузера */
+* { box-sizing: border-box; }
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ol {
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+/* конец кода сброса стилей браузера */
+html, body {
+  height: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "head head head"
+                       "nav main side"
+                       "foot foot foot";
+}
+header {
+  grid-area: head;
+  text-align: center;
+  padding: 20px;
+	color: red;
+	font-size: 1.5em;
+	font-weight: bold;
+  background-color: #99FFCD;
+}
+nav {
+  grid-area: nav;
+  padding: 20px;
+  background-color: #9FB4FF;
+}
+article {
+  grid-area: main;
+  padding: 30px;
+  background-color: #F6F6F6;
+}
+aside {
+  grid-area: side;
+  padding: 20px;
+  background-color: #FFD36E;
+}
+footer {
+  grid-area: foot;
+  text-align: center;
+  padding: 20px;
+  color: red;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: #FFF56D;
+}
+@media (max-width: 1024px) {
+  body {
+    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-areas: "head head head"
+                         "nav nav nav"
+                         "main main main"
+                         "side side side"
+                         "foot foot foot";
+  }
+}
